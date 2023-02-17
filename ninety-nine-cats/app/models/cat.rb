@@ -20,7 +20,7 @@ class Cat < ApplicationRecord
   
   CAT_COLORS = ['brown','white','orange','gray','black']
 
-  validates :birth_date, :color, :name, :sex, prescence: true
+  validates :birth_date, :color, :name, :sex, presence: true
   
   validates :sex, inclusion: { in: %w(M F) }
   validates :color, inclusion: {in: CAT_COLORS}
@@ -37,12 +37,12 @@ class Cat < ApplicationRecord
     time_ago_in_words(age)
   end
 
-  def initialize(birth_date, color, name, sex, description)
-    @birth_date = birth_date
-    @color = color
-    @name = name
-    @sex = sex
-    @description = description
-  end
+  # def initialize (birth_date, color, name, sex, description)
+  #   @birth_date = birth_date
+  #   @color = color
+  #   @name = name
+  #   @sex = sex
+  #   @description = description
+  # end
 
 end
